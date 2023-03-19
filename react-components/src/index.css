@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+header {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    gap: 40px;
+}
+
+.active-link {
+    color: greenyellow;
+    border-bottom: 1px solid greenyellow;
+}
