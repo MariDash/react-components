@@ -1,17 +1,22 @@
 /* eslint-disable react/destructuring-assignment */
-/* eslint-disable react/prefer-stateless-function */
 import React from 'react';
 
 interface SearchBarState {
     value: string;
 }
 
-class SearchBar extends React.Component<never, SearchBarState> {
-    constructor(props: never) {
+interface SearchBarProps {
+    type: string;
+}
+
+class SearchBar extends React.Component<SearchBarProps, SearchBarState> {
+    type: string;
+
+    constructor(props: SearchBarProps) {
         super(props);
 
         const inputValue = localStorage.getItem('inputValue') || '';
-
+        this.type = props.type;
         this.state = {
             value: inputValue,
         };
@@ -28,7 +33,7 @@ class SearchBar extends React.Component<never, SearchBarState> {
     render(): JSX.Element {
         return (
             <input
-                type="text"
+                type={this.type}
                 className="input"
                 placeholder="
         Start typing here..."
