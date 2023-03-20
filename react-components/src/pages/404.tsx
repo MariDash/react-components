@@ -7,9 +7,9 @@ const text = 'Page Not Found :(';
 class NotFound extends React.Component {
     render(): JSX.Element {
         return (
-            <div>
-                <Link to="/">Go home</Link>
+            <div className="wrapper not-found">
                 <h1>{text}</h1>
+                <Link to="/">Go home</Link>
             </div>
         );
     }

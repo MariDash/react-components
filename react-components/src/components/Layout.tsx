@@ -9,7 +9,7 @@ class Layout extends React.Component {
         return (
             <>
                 <Header />
-                <main className="main">
+                <main className="main wrapper">
                     <Outlet />
                 </main>
                 <Footer />
